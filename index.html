@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبو يحيى - تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <img src="img/photo_2026-10-13_22-49-43.jpg" alt="لوجو أبو يحيى" class="logo">
+        <h2>أهلاً بيك في أبو يحيى</h2>
+        <p class="slogan-light">طعم الأصالة .. في كل لقمة</p>
+        
+        <div class="form-group mt-20">
+            <input type="text" id="userName" placeholder="الاسم الكريم" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" id="userPhone" placeholder="رقم هاتفك" required>
+        </div>
+
+        <h3 class="branch-title-light">📍 اختر الفرع الأقرب</h3>
+        <div class="branches-container">
+            <label class="branch-card-light">
+                <input type="radio" name="branch" value="فرع الأردنية بجوار البنك الأهلي" checked>
+                <div class="branch-content">
+                    <span class="pin">📍</span>
+                    <div class="branch-text">
+                        <strong>فرع العاشر من رمضان</strong>
+                        <span>الأردنية بجوار البنك الأهلي</span>
+                    </div>
+                </div>
+            </label>
+            <label class="branch-card-light">
+                <input type="radio" name="branch" value="فرع موقف العاشر الجديد">
+                <div class="branch-content">
+                    <span class="pin">📍</span>
+                    <div class="branch-text">
+                        <strong>فرع العاشر من رمضان</strong>
+                        <span>موقف العاشر الجديد</span>
+                    </div>
+                </div>
+            </label>
+        </div>
+        
+        <button onclick="login()" class="btn-primary mt-20">تصفح القائمة</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

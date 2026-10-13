@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبو يحيى - المنيو</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="menu-page">
+    <header>
+        <div class="header-content">
+            <img src="img/photo_2026-10-13_22-49-43.jpg" alt="لوجو أبو يحيى" class="header-logo">
+            <h1 id="selectedBranchDisplay">قائمة الطعام</h1>
+        </div>
+        <!-- ملف الـ PDF موجود بره فولدر الصور فبنسيبه زي ما هو -->
+        <a href="Document1.pdf" target="_blank" class="btn-download">⬇ عرض/تحميل المنيو</a>
+    </header>
+
+    <main>
+        <h2 class="section-title">منتجاتنا</h2>
+        <div class="products-grid" id="productsGrid">
+            <!-- المنتجات هتظهر هنا -->
+        </div>
+    </main>
+
+    <div class="cart-summary">
+        <div class="total-text">الإجمالي: <span id="totalPrice">0</span> جنيه</div>
+        <button onclick="goToCheckout()" class="btn-primary btn-checkout">متابعة الطلب</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        window.onload = renderMenu;
+    </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f7ebc6;
+    color: #5a0000;
+}
+
+.mt-20 { margin-top: 20px; }
+
+/* صفحة الدخول - تم ربط الخلفية الصحيحة */
+.login-page {
+    background-image: url('img/7e3c16ce-7e6a-45a8-b170-6a4696b8ba4b.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 2px solid #800000;
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 5px;
+}
+
+.login-container h2 { color: #800000; margin-bottom: 5px; }
+.slogan-light { color: #555; font-size: 15px; margin-bottom: 20px; }
+
+.form-group { margin-bottom: 15px; }
+
+input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    text-align: right;
+    background-color: white;
+}
+input:focus { border-color: #800000; }
+
+.branch-title-light {
+    color: #800000;
+    margin: 15px 0 10px;
+    font-size: 16px;
+    text-align: right;
+}
+
+.branches-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.branch-card-light {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+}
+
+.branch-card-light input { display: none; }
+
+.branch-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.pin { font-size: 20px; }
+
+.branch-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.branch-text strong { font-size: 15px; color: #800000; }
+.branch-text span { font-size: 12px; color: #777; }
+
+.branch-card-light:has(input:checked) {
+    border: 2px solid #800000;
+    background-color: #fdf6e3;
+}
+
+.btn-primary {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background-color: #5a0000; }
+
+/* الهيدر */
+header {
+    background-color: #800000;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #e0c890;
+}
+
+.header-content { display: flex; align-items: center; gap: 10px; }
+.header-logo { width: 40px; border-radius: 50%; }
+.header-content h1 { font-size: 16px; }
+
+.btn-download {
+    background-color: #f7ebc6;
+    color: #800000;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* المنتجات */
+.section-title { text-align: center; margin: 15px 0; color: #800000; }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 80px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #e0c890;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.product-info { padding: 10px; }
+.product-info h3 { font-size: 14px; margin-bottom: 5px; color: #800000;}
+.product-info p { font-size: 14px; font-weight: bold; color: #333; margin-bottom: 10px;}
+
+.qty-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.qty-btn {
+    background-color: #800000;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.qty-display { font-weight: bold; font-size: 14px;}
+
+/* سلة المشتريات السفلية */
+.cart-summary {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total-text { font-size: 16px; font-weight: bold; color: #800000; }
+.btn-checkout { width: auto; padding: 10px 15px; font-size: 15px; }
+
+/* صفحة إتمام الطلب */
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.order-summary, .checkout-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #e0c890;
+}
+
+.order-summary h3, .checkout-form h3 { color: #800000; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+
+.cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px;}
+.delivery-fee { font-size: 14px; color: #555; margin: 15px 0;}
+.final-total { color: #800000; margin-top: 10px; }
+
+.payment-methods { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;}
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.payment-option img { width: 70px; object-fit: contain; }
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-whatsapp:hover { background-color: #1ebe5d; }
+
+.btn-secondary {
+    background-color: #e0c890;
+    color: #5a0000;
+    border: 1px solid #800000;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+.btn-secondary:hover { background-color: #d1b575; }
+.location-status { font-size: 13px; margin-top: 5px; display: none; font-weight: bold; }
